@@ -14,13 +14,12 @@ pod 'ASJAlertController'
 
 # Usage
 
-A bare bones example:
-
 ```objc
 [UIAlertController showAlertWithTitle:@"Title"
                                 message:@"Message"
                       cancelButtonTitle:@"Cancel"
-                             tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle) {
+                             tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
+                             {
                                // handle button taps here
                              }];
 ```
@@ -32,9 +31,9 @@ A bare bones example:
                             otherButtons:@[button1, button2, ...]
                           preferredStyle:ASJAlertControllerStyleActionSheet
                               tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
-   {
-     // handle button taps here...
-   }];
+                             {
+                                // handle button taps here...
+                            }];
 ```
 For `otherButtons`, you need to pass an `NSArray` of kind `ASJAlertButton`s or `NSString`s, depending on the method you use. You may keep `nil` any arguments you don't require.
 
