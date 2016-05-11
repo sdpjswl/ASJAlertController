@@ -1,8 +1,8 @@
 # ASJAlertController
 
-`UIAlertController` is a major improvement over the good old alert view. It doesn't however have a simple "show" method to make it appear on the screen and must be presented on a view controller. Like me, if you miss the old way of showing alerts, this little library will be of help.
+`UIAlertController` is a major improvement over the good old `UIAlertView`. It doesn't however have a simple `show` method to make it appear on the screen and must be presented on a view controller. Like me, if you miss the old way of showing alerts, this little library will be of help.
 
-This is a category on `UIAlertController` that adds the `show` method and a few convenience methods to create alerts.
+This is a category on `UIAlertController` that adds the `show` method and a few convenience methods to create alerts and action sheets.
 
 # Installation
 
@@ -43,4 +43,4 @@ For `otherButtons`, you need to pass an `NSArray` of kind `ASJAlertButton`s or `
 
 # License
 
-ASJAlertController is available under the MIT license. See the LICENSE file for more info.
+`ASJAlertController` is available under the MIT license. See the LICENSE file for more info.
