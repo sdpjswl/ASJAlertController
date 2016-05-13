@@ -37,7 +37,8 @@ pod 'ASJAlertController'
 ```
 For `otherButtons`, you need to pass an `NSArray` of kind `ASJAlertButton`s or `NSString`s, depending on the method you use. You may keep `nil` any arguments you don't require.
 
-###Thanks
+# Credits
+
 - To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this
 - To [Shashank Pali](https://github.com/shashankpali) for the motivation
 
