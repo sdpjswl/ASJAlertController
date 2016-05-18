@@ -37,6 +37,21 @@ pod 'ASJAlertController'
 ```
 For `otherButtons`, you need to pass an `NSArray` of kind `ASJAlertButton`s or `NSString`s, depending on the method you use. You may keep `nil` any arguments you don't require.
 
+```objc
+ASJAlertController *alert = [ASJAlertController alertWithTitle:@"Title"
+                                                      message:@"Message"
+                                            cancelButtonTitle:@"Cancel"
+                                       destructiveButtonTitle:nil
+                                                  otherTitles:nil
+                                              preferredStyle:ASJAlertControllerStyleAlert
+                                                  tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
+                               {
+                                 // handle button taps here...
+                               }];
+[alert show];
+```
+To create an alert object and manually show it on the screen.
+
 # Credits
 
 - To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this

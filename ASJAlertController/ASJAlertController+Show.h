@@ -26,6 +26,8 @@
 typedef UIAlertController ASJAlertController;
 typedef UIAlertAction ASJAlertAction;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^TapHandler)(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle);
 
 typedef NS_ENUM(NSInteger, ASJAlertControllerStyle) {
@@ -52,10 +54,10 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *
  *  @return Returns an instance of UIAlertController.
  */
-+ (_Nullable instancetype)showAlertWithTitle:(nullable NSString *)title
-                                     message:(nullable NSString *)message
-                           cancelButtonTitle:(nullable NSString *)cancelTitle
-                                  tapHandler:(nullable TapHandler)tapHandler;
++ (instancetype)showAlertWithTitle:(nullable NSString *)title
+                           message:(nullable NSString *)message
+                 cancelButtonTitle:(nullable NSString *)cancelTitle
+                        tapHandler:(nullable TapHandler)tapHandler;
 
 /**
  *  Creates and shows an alert on the screen. DOES NOT require a view controller to be presented upon.
@@ -69,12 +71,12 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *
  *  @return Returns an instance of UIAlertController.
  */
-+ (_Nullable instancetype)showAlertWithTitle:(nullable NSString *)title
-                                     message:(nullable NSString *)message
-                           cancelButtonTitle:(nullable NSString *)cancelTitle
-                                otherButtons:(nullable NSArray<ASJAlertButton *> *)otherButtons
-                              preferredStyle:(ASJAlertControllerStyle)style
-                                  tapHandler:(nullable TapHandler)tapHandler;
++ (instancetype)showAlertWithTitle:(nullable NSString *)title
+                           message:(nullable NSString *)message
+                 cancelButtonTitle:(nullable NSString *)cancelTitle
+                      otherButtons:(nullable NSArray<ASJAlertButton *> *)otherButtons
+                    preferredStyle:(ASJAlertControllerStyle)style
+                        tapHandler:(nullable TapHandler)tapHandler;
 
 /**
  *  Creates an alert. It is your call how to present it on the screen.
@@ -88,12 +90,12 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *
  *  @return Returns an instance of UIAlertController.
  */
-+ (_Nullable instancetype)alertWithTitle:(nullable NSString *)title
-                                 message:(nullable NSString *)message
-                       cancelButtonTitle:(nullable NSString *)cancelTitle
-                            otherButtons:(nullable NSArray<ASJAlertButton *> *)otherButtons
-                          preferredStyle:(ASJAlertControllerStyle)style
-                              tapHandler:(nullable TapHandler)tapHandler;
++ (instancetype)alertWithTitle:(nullable NSString *)title
+                       message:(nullable NSString *)message
+             cancelButtonTitle:(nullable NSString *)cancelTitle
+                  otherButtons:(nullable NSArray<ASJAlertButton *> *)otherButtons
+                preferredStyle:(ASJAlertControllerStyle)style
+                    tapHandler:(nullable TapHandler)tapHandler;
 
 /**
  *  Creates and shows an alert on the screen. It is your call how to present it on the screen.
@@ -108,13 +110,13 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *
  *  @return Returns an instance of UIAlertController.
  */
-+ (_Nullable instancetype)showAlertWithTitle:(nullable NSString *)title
-                                     message:(nullable NSString *)message
-                           cancelButtonTitle:(nullable NSString *)cancelTitle
-                      destructiveButtonTitle:(nullable NSString *)destructiveTitle
-                                 otherTitles:(nullable NSArray <NSString *>*)otherTitles
-                              preferredStyle:(ASJAlertControllerStyle)style
-                                  tapHandler:(nullable TapHandler)tapHandler;
++ (instancetype)showAlertWithTitle:(nullable NSString *)title
+                           message:(nullable NSString *)message
+                 cancelButtonTitle:(nullable NSString *)cancelTitle
+            destructiveButtonTitle:(nullable NSString *)destructiveTitle
+                       otherTitles:(nullable NSArray <NSString *>*)otherTitles
+                    preferredStyle:(ASJAlertControllerStyle)style
+                        tapHandler:(nullable TapHandler)tapHandler;
 
 /**
  *  Creates an alert. It is your call how to present it on the screen.
@@ -129,13 +131,13 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *
  *  @return Returns an instance of UIAlertController.
  */
-+ (_Nullable instancetype)alertWithTitle:(nullable NSString *)title
-                                 message:(nullable NSString *)message
-                       cancelButtonTitle:(nullable NSString *)cancelTitle
-                  destructiveButtonTitle:(nullable NSString *)destructiveTitle
-                             otherTitles:(nullable NSArray <NSString *>*)otherTitles
-                          preferredStyle:(ASJAlertControllerStyle)style
-                              tapHandler:(nullable TapHandler)tapHandler;
++ (instancetype)alertWithTitle:(nullable NSString *)title
+                       message:(nullable NSString *)message
+             cancelButtonTitle:(nullable NSString *)cancelTitle
+        destructiveButtonTitle:(nullable NSString *)destructiveTitle
+                   otherTitles:(nullable NSArray <NSString *>*)otherTitles
+                preferredStyle:(ASJAlertControllerStyle)style
+                    tapHandler:(nullable TapHandler)tapHandler;
 
 /**
  *  Show the alert on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
@@ -153,17 +155,26 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
 
 @interface ASJAlertButton : NSObject
 
+/**
+ *  The alert button's title.
+ */
 @property (nullable, copy, nonatomic) NSString *title;
+
+/**
+ *  The alert button's style. Can be of styles 'ASJAlertActionStyleDefault' or 'ASJAlertActionStyleDestructive'.
+ */
 @property (assign, nonatomic) ASJAlertActionStyle style;
 
 /**
  *  Convenience constructor to quickly create instances.
  *
- *  @param title The action title.
- *  @param style The action's style. Can be of styles 'ASJAlertActionStyleDefault' or 'ASJAlertActionStyleDestructive'.
+ *  @param title The alert button's title.
+ *  @param style The alert button's style. Can be of styles 'ASJAlertActionStyleDefault' or 'ASJAlertActionStyleDestructive'.
  *
  *  @return Returns an instance of ASJAlertButton.
  */
-+ (ASJAlertButton * _Nullable)buttonWithTitle:(nullable NSString *)title style:(ASJAlertActionStyle)style;
++ (ASJAlertButton *)buttonWithTitle:(nullable NSString *)title style:(ASJAlertActionStyle)style;
 
 @end
+
+NS_ASSUME_NONNULL_END
