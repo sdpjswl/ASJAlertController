@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boy-o2-uWY">
-                                <rect key="frame" x="177" y="242" width="246" height="116"/>
+                                <rect key="frame" x="177" y="208" width="246" height="184"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-R8-E2T">
                                         <rect key="frame" x="53" y="0.0" width="141" height="48"/>
@@ -28,8 +28,16 @@
                                             <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bu1-O5-Hmg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w30-rm-45B">
+                                        <rect key="frame" x="0.0" y="68" width="247" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Show custom alert"/>
+                                        <connections>
+                                            <action selector="showCustomAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AlL-ot-0dE"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-MF-EsH">
-                                        <rect key="frame" x="0.0" y="68" width="246" height="48"/>
+                                        <rect key="frame" x="0.0" y="136" width="246" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Show action sheet"/>
                                         <connections>
@@ -37,9 +45,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="CF4-MF-EsH" firstAttribute="top" secondItem="w30-rm-45B" secondAttribute="bottom" constant="20" id="3cM-Rc-edg"/>
                                     <constraint firstItem="CF4-MF-EsH" firstAttribute="leading" secondItem="boy-o2-uWY" secondAttribute="leading" id="4cI-DF-VWN"/>
+                                    <constraint firstItem="w30-rm-45B" firstAttribute="centerX" secondItem="eC1-R8-E2T" secondAttribute="centerX" id="6q0-Vf-LA6"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eC1-R8-E2T" secondAttribute="trailing" id="CnH-Yu-8Wt"/>
                                     <constraint firstItem="CF4-MF-EsH" firstAttribute="centerX" secondItem="eC1-R8-E2T" secondAttribute="centerX" id="Epu-hA-Sxb"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="boy-o2-uWY" secondAttribute="leading" id="I4s-mn-TnI"/>
@@ -48,6 +57,7 @@
                                     <constraint firstAttribute="bottom" secondItem="CF4-MF-EsH" secondAttribute="bottom" id="Lls-t8-x0W"/>
                                     <constraint firstItem="CF4-MF-EsH" firstAttribute="top" secondItem="eC1-R8-E2T" secondAttribute="bottom" constant="20" id="jtJ-RI-Pcb"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="centerX" secondItem="boy-o2-uWY" secondAttribute="centerX" id="l5C-nv-aeb"/>
+                                    <constraint firstItem="w30-rm-45B" firstAttribute="top" secondItem="eC1-R8-E2T" secondAttribute="bottom" constant="20" id="qVW-Dv-hgn"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="centerX" secondItem="CF4-MF-EsH" secondAttribute="centerX" id="qjT-et-sEp"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="top" secondItem="boy-o2-uWY" secondAttribute="top" id="uSv-kV-BBG"/>
                                 </constraints>
@@ -57,6 +67,7 @@
                                         <exclude reference="I4s-mn-TnI"/>
                                         <exclude reference="qjT-et-sEp"/>
                                         <exclude reference="LGF-wg-0WB"/>
+                                        <exclude reference="jtJ-RI-Pcb"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -70,6 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="255"/>
         </scene>
     </scenes>
 </document>
