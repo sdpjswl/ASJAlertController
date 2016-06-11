@@ -140,6 +140,15 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
                     tapHandler:(nullable TapHandler)tapHandler;
 
 /**
+ *  Show the alert with a custom view you provide on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
+ *
+ *  @param view A custom view designed by you to show as the alert. Note that you will need to handle any actions on that view.
+ *
+ *  @return Returns an instance of UIAlertController.
+ */
++ (instancetype)showAlertWithCustomView:(UIView *)view;
+
+/**
  *  Show the alert on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
  */
 - (void)show;
@@ -150,6 +159,11 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
  *  @param animated Pass a BOOL to show alert with or without animation.
  */
 - (void)show:(BOOL)animated;
+
+/**
+ *  Dismiss an alert controller from the screen.You MUST use this method to dismiss custom alerts created by "showAlertWithCustomView".
+ */
+- (void)dismiss;
 
 @end
 
