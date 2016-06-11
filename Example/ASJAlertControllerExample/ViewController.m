@@ -8,19 +8,25 @@
 
 #import "ViewController.h"
 #import "ASJAlertController+Show.h"
+#import "Test.h"
 
-@interface ViewController ()
+@interface ViewController () {
+  ASJAlertController *customAlert;
+}
 
 @property (readonly, copy, nonatomic) NSArray<ASJAlertButton *> *alertButtons;
+@property (strong, nonatomic) Test *customAlertView;
 
 - (IBAction)showAlert:(id)sender;
+- (IBAction)showCustomAlert:(id)sender;
 - (IBAction)showActionSheet:(id)sender;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
 }
@@ -46,6 +52,17 @@
    }];
 }
 
+- (IBAction)showCustomAlert:(id)sender
+{
+  _customAlertView = (Test *)[[NSBundle mainBundle] loadNibNamed:@"Test" owner:self options:nil][0];
+  customAlert = [ASJAlertController showAlertWithCustomView:_customAlertView];
+  
+  [_customAlertView setButtonTappedBlock:^{
+    [customAlert dismiss];
+  }];
+  
+  return;
+}
 
 - (IBAction)showActionSheet:(id)sender
 {
