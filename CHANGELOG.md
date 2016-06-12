@@ -1,0 +1,26 @@
+# Change Log
+
+## [0.2](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/0.2)
+Released on Friday, 15 Jan, 2016.
+
+#### Added
+* Added nullability annotations.
+* Added example to readme using "show" method.
+
+#### Fixed
+* Minor formatting fixes to readme and code.
+
+## [0.1](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/0.1)
+Released on Wednesday, 11 May, 2016.
+
+#### Fixed
+* Minor formatting fixes to readme.
+
+#### Updated
+* Readme to show how to install from CocoaPods.
+
+## [0.0.1](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/0.0.1)
+Released on Monday, 9 May, 2016.
+
+#### Added
+* Initial release.
