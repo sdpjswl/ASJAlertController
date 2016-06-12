@@ -1,7 +1,7 @@
 # Change Log
 
 ## [0.2](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/0.2)
-Released on Friday, 15 Jan, 2016.
+Released on Wednesday, 18 May, 2016.
 
 #### Added
 * Added nullability annotations.
