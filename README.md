@@ -8,7 +8,7 @@ This is a category on `UIAlertController` that adds the `show` method and a few 
 
 CocoaPods is the preferred way to install this library. Add this command to your `Podfile`:
 
-```
+```ruby
 pod 'ASJAlertController'
 ```
 
@@ -35,6 +35,7 @@ pod 'ASJAlertController'
                                 // handle button taps here...
                             }];
 ```
+
 For `otherButtons`, you need to pass an `NSArray` of kind `ASJAlertButton`s or `NSString`s, depending on the method you use. You may keep `nil` any arguments you don't require.
 
 ```objc
@@ -50,12 +51,13 @@ ASJAlertController *alert = [ASJAlertController alertWithTitle:@"Title"
                                }];
 [alert show];
 ```
+
 To create an alert object and manually show it on the screen.
 
 # Credits
 
-- To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this
-- To [Shashank Pali](https://github.com/shashankpali) for the motivation
+- To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this.
+- To [Shashank Pali](https://github.com/shashankpali) for the motivation.
 
 # License
 
