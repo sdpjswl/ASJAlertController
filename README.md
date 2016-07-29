@@ -25,6 +25,9 @@ pod 'ASJAlertController'
 ```
 
 ```objc
+ASJAlertButton *button1 = [ASJAlertButton buttonWithTitle:@"Button 1" style:ASJAlertActionStyleDestructive];
+ASJAlertButton *button2 = [ASJAlertButton buttonWithTitle:@"Button 2" style:ASJAlertActionStyleDefault];
+  
 [ASJAlertController showAlertWithTitle:@"Title"
                                  message:@"Message"
                        cancelButtonTitle:@"Cancel"
