@@ -59,8 +59,9 @@ To create an alert object and manually show it on the screen.
 
 # Credits
 
-- To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this
 - To [Shashank Pali](https://github.com/shashankpali) for the motivation
+- [How to present UIAlertController when not in a view controller?](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller)
+- [How can I get rid of an “unused variable” warning in Xcode?](http://stackoverflow.com/questions/5451123/how-can-i-get-rid-of-an-unused-variable-warning-in-xcode)
 
 # License
 

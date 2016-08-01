@@ -6,6 +6,9 @@ Released on Monday, 1 Aug, 2016.
 #### Added
 * Added change log.
 
+#### Fixed
+* Fixed unused variable warnings in release environment.
+
 ### Updated
 * Minor formatting stuff.
 * Example to create `ASJAlertButton`s.
