@@ -14,8 +14,6 @@
 		6B8E40A71CE03D2B005FCD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E40A61CE03D2B005FCD0C /* Assets.xcassets */; };
 		6B8E40AA1CE03D2B005FCD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E40A81CE03D2B005FCD0C /* LaunchScreen.storyboard */; };
 		6B8E40B41CE03D91005FCD0C /* ASJAlertController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E40B31CE03D91005FCD0C /* ASJAlertController+Show.m */; };
-		C08D060A1D0C4CC400EB01C1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C08D06081D0C4CC400EB01C1 /* Test.m */; };
-		C08D060B1D0C4CC400EB01C1 /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08D06091D0C4CC400EB01C1 /* Test.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +29,6 @@
 		6B8E40AB1CE03D2B005FCD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B8E40B21CE03D91005FCD0C /* ASJAlertController+Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASJAlertController+Show.h"; sourceTree = "<group>"; };
 		6B8E40B31CE03D91005FCD0C /* ASJAlertController+Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASJAlertController+Show.m"; sourceTree = "<group>"; };
-		C08D06071D0C4CC400EB01C1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		C08D06081D0C4CC400EB01C1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
-		C08D06091D0C4CC400EB01C1 /* Test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +66,6 @@
 				6B8E409E1CE03D2B005FCD0C /* AppDelegate.m */,
 				6B8E40A01CE03D2B005FCD0C /* ViewController.h */,
 				6B8E40A11CE03D2B005FCD0C /* ViewController.m */,
-				C08D06071D0C4CC400EB01C1 /* Test.h */,
-				C08D06081D0C4CC400EB01C1 /* Test.m */,
-				C08D06091D0C4CC400EB01C1 /* Test.xib */,
 				6B8E40A31CE03D2B005FCD0C /* Main.storyboard */,
 				6B8E40A61CE03D2B005FCD0C /* Assets.xcassets */,
 				6B8E40A81CE03D2B005FCD0C /* LaunchScreen.storyboard */,
@@ -159,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8E40AA1CE03D2B005FCD0C /* LaunchScreen.storyboard in Resources */,
-				C08D060B1D0C4CC400EB01C1 /* Test.xib in Resources */,
 				6B8E40A71CE03D2B005FCD0C /* Assets.xcassets in Resources */,
 				6B8E40A51CE03D2B005FCD0C /* Main.storyboard in Resources */,
 			);
@@ -172,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08D060A1D0C4CC400EB01C1 /* Test.m in Sources */,
 				6B8E40A21CE03D2B005FCD0C /* ViewController.m in Sources */,
 				6B8E40B41CE03D91005FCD0C /* ASJAlertController+Show.m in Sources */,
 				6B8E409F1CE03D2B005FCD0C /* AppDelegate.m in Sources */,

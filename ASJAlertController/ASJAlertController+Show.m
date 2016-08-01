@@ -157,36 +157,6 @@
   return alert;
 }
 
-#pragma mark - Custom view
-
-// http://stackoverflow.com/questions/32790207/uialertcontroller-add-custom-views-to-actionsheet
-
-+ (instancetype)showAlertWithCustomView:(UIView *)view
-{
-  NSAssert(view, @"You must provide a view to present as alert.");
-  CGFloat lineHeight = 22.0f;
-  CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-  NSInteger numberOfLines = (NSInteger)screenHeight/lineHeight;
-  
-  NSMutableString *newLineString = [[NSMutableString alloc] init];
-  for (int i=0; i<numberOfLines; i++) {
-    [newLineString appendString:@"\n"];
-  }
-  UIAlertController *alert = [UIAlertController alertControllerWithTitle:newLineString message:nil preferredStyle:UIAlertControllerStyleAlert];
-  alert.view.autoresizesSubviews = YES;
-  
-  // remove existing views
-  for (UIView *view in alert.view.subviews) {
-    view.hidden = YES;
-  }
-  
-  view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  view.center = alert.view.center;
-  [alert.view addSubview:view];
-  [alert show];
-  return alert;
-}
-
 #pragma mark - Show-dismiss
 
 - (void)show

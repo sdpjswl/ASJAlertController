@@ -30,12 +30,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^TapHandler)(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle);
 
-typedef NS_ENUM(NSInteger, ASJAlertControllerStyle) {
+typedef NS_ENUM(NSInteger, ASJAlertControllerStyle)
+{
   ASJAlertControllerStyleActionSheet,
   ASJAlertControllerStyleAlert
 };
 
-typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
+typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
+{
   ASJAlertActionStyleDefault = 0,
   ASJAlertActionStyleDestructive = 2
 };
@@ -138,15 +140,6 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle) {
                    otherTitles:(nullable NSArray <NSString *>*)otherTitles
                 preferredStyle:(ASJAlertControllerStyle)style
                     tapHandler:(nullable TapHandler)tapHandler;
-
-/**
- *  Show the alert with a custom view you provide on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
- *
- *  @param view A custom view designed by you to show as the alert. Note that you will need to handle any actions on that view.
- *
- *  @return Returns an instance of UIAlertController.
- */
-+ (instancetype)showAlertWithCustomView:(UIView *)view;
 
 /**
  *  Show the alert on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
