@@ -59,8 +59,8 @@ To create an alert object and manually show it on the screen.
 
 # Credits
 
-- To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this.
-- To [Shashank Pali](https://github.com/shashankpali) for the motivation.
+- To this [Stack Overflow answer](http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller) that started this
+- To [Shashank Pali](https://github.com/shashankpali) for the motivation
 
 # License
 
