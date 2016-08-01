@@ -86,7 +86,8 @@
                 preferredStyle:(ASJAlertControllerStyle)style
                     tapHandler:(TapHandler)tapHandler
 {
-  for (id object in otherButtons) {
+  for (id __attribute__((unused)) object in otherButtons)
+  {
     NSAssert([object isKindOfClass:[ASJAlertButton class]], @"Other buttons must be of type ASJAlertButton");
   }
   
@@ -130,7 +131,8 @@
                 preferredStyle:(ASJAlertControllerStyle)style
                     tapHandler:(TapHandler)tapHandler
 {
-  for (id object in otherTitles) {
+  for (id __attribute__((unused)) object in otherTitles)
+  {
     NSAssert([object isKindOfClass:[NSString class]], @"Other buttons must be of type NSString");
   }
   
