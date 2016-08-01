@@ -157,7 +157,7 @@
   return alert;
 }
 
-#pragma mark - Show-dismiss
+#pragma mark - Show
 
 - (void)show
 {
@@ -175,11 +175,6 @@
   
   [self.alertWindow makeKeyAndVisible];
   [self.alertWindow.rootViewController presentViewController:self animated:animated completion:nil];
-}
-
-- (void)dismiss
-{
-  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Action constructors

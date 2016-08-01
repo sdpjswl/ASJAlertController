@@ -153,11 +153,6 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
  */
 - (void)show:(BOOL)animated;
 
-/**
- *  Dismiss an alert controller from the screen.You MUST use this method to dismiss custom alerts created by "showAlertWithCustomView".
- */
-- (void)dismiss;
-
 @end
 
 @interface ASJAlertButton : NSObject
