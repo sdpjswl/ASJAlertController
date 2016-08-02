@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
 @interface UIAlertController (Show)
 
 /**
- *  Creates and shows an alert on the screen. DOES NOT require a view controller to be presented upon.
+ *  Creates and shows an alert using title, message and cancel title. DOES NOT require a view controller to be presented upon.
  *
  *  @param title       The alert's title.
  *  @param message     The alert's message.
@@ -62,7 +62,22 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                         tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Creates and shows an alert on the screen. DOES NOT require a view controller to be presented upon.
+ *  Creates and shows an action sheet using title, message and cancel title. DOES NOT require a view controller to be presented upon.
+ *
+ *  @param title       The action sheet's title.
+ *  @param message     The action sheet's message.
+ *  @param cancelTitle The cancel button's title. Tapping it should ONLY dismiss the alert.
+ *  @param tapHandler  A block to handle any button tapped on the alert.
+ *
+ *  @return Returns an instance of UIAlertController.
+ */
++ (instancetype)showActionSheetWithTitle:(nullable NSString *)title
+                                 message:(nullable NSString *)message
+                       cancelButtonTitle:(nullable NSString *)cancelTitle
+                              tapHandler:(nullable TapHandler)tapHandler;
+
+/**
+ *  Creates and shows an alert/action sheet using title, message and cancel title and other button objects. DOES NOT require a view controller to be presented upon.
  *
  *  @param title        The alert's title.
  *  @param message      The alert's message.
@@ -81,7 +96,7 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                         tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Creates an alert. It is your call how to present it on the screen.
+ *  Creates an alert/action sheet using title, message and cancel title and other button objects. It is your call when to present it on the screen.
  *
  *  @param title        The alert's title.
  *  @param message      The alert's message.
@@ -100,7 +115,7 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                     tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Creates and shows an alert on the screen. It is your call how to present it on the screen.
+ *  Creates and shows an alert/action sheet using title, message and cancel title and other button strings.
  *
  *  @param title            The alert's title.
  *  @param message          The alert's message.
@@ -121,7 +136,7 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                         tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Creates an alert. It is your call how to present it on the screen.
+ *  Creates an alert/action sheet using title, message and cancel title and other button strings. It is your call when to present it on the screen.
  *
  *  @param title            The alert's title.
  *  @param message          The alert's message.
@@ -142,7 +157,7 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                     tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Show the alert on the screen with animation. This method is a throwback to the UIAlertView days and DOES NOT require a view controller to present the UIAlertController.
+ *  Show the alert on the screen with animation. This method is a throwback to the UIAlertView days and does NOT require a view controller to present the UIAlertController.
  */
 - (void)show;
 

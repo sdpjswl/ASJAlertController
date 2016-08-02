@@ -24,8 +24,6 @@
 #import "ASJAlertController+Show.h"
 #import <objc/runtime.h>
 
-// Thanks: http://stackoverflow.com/questions/26554894/how-to-present-uialertcontroller-when-not-in-a-view-controller
-
 @interface UIAlertController (Private)
 
 @property (strong, nonatomic) UIWindow *alertWindow;
@@ -65,6 +63,11 @@
                         tapHandler:(nullable TapHandler)tapHandler
 {
   return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleAlert tapHandler:tapHandler];
+}
+
++ (instancetype)showActionSheetWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle tapHandler:(TapHandler)tapHandler
+{
+  return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleActionSheet tapHandler:tapHandler];
 }
 
 + (instancetype)showAlertWithTitle:(NSString *)title
