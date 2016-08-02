@@ -75,8 +75,6 @@ ASJAlertController *alert = [ASJAlertController alertWithTitle:@"Title"
 [alert show];
 ```
 
-To create an alert object and manually show it on the screen.
-
 # Credits
 
 - To [Shashank Pali](https://github.com/shashankpali) for the motivation
