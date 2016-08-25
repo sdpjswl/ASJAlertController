@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.2](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/1.2)
+Released on Thursday, 25 Aug, 2016.
+
+#### Fixed
+* Fixed convenience method for action sheet; added arguments for destructive button title and other button titles. Before it was quite useless.
+
 ## [1.1](https://github.com/sudeepjaiswal/ASJAlertController/releases/tag/1.1)
 Released on Tuesday, 2 Aug, 2016.
 
