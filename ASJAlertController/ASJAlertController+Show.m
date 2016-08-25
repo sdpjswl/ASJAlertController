@@ -65,9 +65,14 @@
   return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleAlert tapHandler:tapHandler];
 }
 
-+ (instancetype)showActionSheetWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelTitle tapHandler:(TapHandler)tapHandler
++ (instancetype)showActionSheetWithTitle:(NSString *)title
+                                 message:(NSString *)message
+                       cancelButtonTitle:(NSString *)cancelTitle
+                  destructiveButtonTitle:(nullable NSString *)destructiveTitle
+                             otherTitles:(nullable NSArray <NSString *>*)otherTitles
+                              tapHandler:(TapHandler)tapHandler
 {
-  return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleActionSheet tapHandler:tapHandler];
+  return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:destructiveTitle otherTitles:otherTitles preferredStyle:ASJAlertControllerStyleActionSheet tapHandler:tapHandler];
 }
 
 + (instancetype)showAlertWithTitle:(NSString *)title

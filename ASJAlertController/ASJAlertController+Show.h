@@ -62,18 +62,22 @@ typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
                         tapHandler:(nullable TapHandler)tapHandler;
 
 /**
- *  Creates and shows an action sheet using title, message and cancel title. DOES NOT require a view controller to be presented upon.
+ *  Creates and shows an action sheet using title, message, cancel title, destructive title and other button titles. DOES NOT require a view controller to be presented upon.
  *
- *  @param title       The action sheet's title.
- *  @param message     The action sheet's message.
- *  @param cancelTitle The cancel button's title. Tapping it should ONLY dismiss the alert.
- *  @param tapHandler  A block to handle any button tapped on the alert.
+ *  @param title            The action sheet's title.
+ *  @param message          The action sheet's message.
+ *  @param cancelTitle      The cancel button's title. Tapping it should ONLY dismiss the alert.
+ *  @param destructiveTitle The destructive button's title. Tapping it should dismiss the alert AND perform some destructive action such as deleting data.
+ *  @param otherTitles      An array of strings for any other buttons in the action sheet.
+ *  @param tapHandler       A block to handle any button tapped on the alert.
  *
  *  @return Returns an instance of UIAlertController.
  */
 + (instancetype)showActionSheetWithTitle:(nullable NSString *)title
                                  message:(nullable NSString *)message
                        cancelButtonTitle:(nullable NSString *)cancelTitle
+                  destructiveButtonTitle:(nullable NSString *)destructiveTitle
+                             otherTitles:(nullable NSArray <NSString *>*)otherTitles
                               tapHandler:(nullable TapHandler)tapHandler;
 
 /**
