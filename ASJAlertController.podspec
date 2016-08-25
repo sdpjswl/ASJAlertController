@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'ASJAlertController'
-  s.version       = '1.1'
+  s.version       = '1.2'
   s.platform      = :ios, '8.0'
   s.license       = { :type => 'MIT' }
   s.homepage      = 'https://github.com/sudeepjaiswal/ASJAlertController'
