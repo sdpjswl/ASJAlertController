@@ -38,12 +38,12 @@
 
 - (IBAction)showActionSheet:(id)sender
 {
-  [ASJAlertController showAlertWithTitle:@"Test"
-                                 message:@"A test action sheet"
-                       cancelButtonTitle:@"Cancel"
-                            otherButtons:self.alertButtons
-                          preferredStyle:ASJAlertControllerStyleActionSheet
-                              tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
+  [ASJAlertController showActionSheetWithTitle:@"Test"
+                                       message:@"A test action sheet"
+                             cancelButtonTitle:@"Cancel"
+                        destructiveButtonTitle:@"Destroy"
+                                   otherTitles:@[@"Button 1", @"Button 2"]
+                                    tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
    {
      NSString *message = [NSString stringWithFormat:@"You tapped \"%@\"", buttonTitle];
      [self showAlertWithMessage:message];
