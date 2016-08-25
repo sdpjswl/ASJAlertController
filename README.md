@@ -34,6 +34,8 @@ pod 'ASJAlertController'
 [ASJAlertController showActionSheetWithTitle:@"Title"
                                        message:@"Message"
                              cancelButtonTitle:@"Cancel"
+                        destructiveButtonTitle:@"Destroy"
+                                   otherTitles:@[@"Button 1", @"Button 2"]
                                     tapHandler:^(ASJAlertAction * _Nullable action, NSString * _Nullable buttonTitle)
    {
      // handle button taps here
