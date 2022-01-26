@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,22 +16,22 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boy-o2-uWY">
-                                <rect key="frame" x="177" y="242" width="246" height="116"/>
+                                <rect key="frame" x="95" y="405" width="238" height="116"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-R8-E2T">
-                                        <rect key="frame" x="53" y="0.0" width="141" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC1-R8-E2T">
+                                        <rect key="frame" x="50" y="0.0" width="138" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Show alert"/>
                                         <connections>
                                             <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bu1-O5-Hmg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-MF-EsH">
-                                        <rect key="frame" x="0.0" y="68" width="246" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-MF-EsH">
+                                        <rect key="frame" x="0.0" y="68" width="238" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Show action sheet"/>
                                         <connections>
@@ -38,34 +40,23 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="CF4-MF-EsH" firstAttribute="leading" secondItem="boy-o2-uWY" secondAttribute="leading" id="4cI-DF-VWN"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eC1-R8-E2T" secondAttribute="trailing" id="CnH-Yu-8Wt"/>
+                                    <constraint firstItem="CF4-MF-EsH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="boy-o2-uWY" secondAttribute="leading" id="4cI-DF-VWN"/>
                                     <constraint firstItem="CF4-MF-EsH" firstAttribute="centerX" secondItem="eC1-R8-E2T" secondAttribute="centerX" id="Epu-hA-Sxb"/>
-                                    <constraint firstItem="eC1-R8-E2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="boy-o2-uWY" secondAttribute="leading" id="I4s-mn-TnI"/>
-                                    <constraint firstItem="CF4-MF-EsH" firstAttribute="centerX" secondItem="boy-o2-uWY" secondAttribute="centerX" id="LGF-wg-0WB"/>
-                                    <constraint firstAttribute="trailing" secondItem="CF4-MF-EsH" secondAttribute="trailing" id="LZS-fx-Yab"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CF4-MF-EsH" secondAttribute="trailing" id="LZS-fx-Yab"/>
                                     <constraint firstAttribute="bottom" secondItem="CF4-MF-EsH" secondAttribute="bottom" id="Lls-t8-x0W"/>
+                                    <constraint firstItem="eC1-R8-E2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="boy-o2-uWY" secondAttribute="leading" id="Vb3-aJ-XYd"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eC1-R8-E2T" secondAttribute="trailing" id="WSs-Qa-bL2"/>
                                     <constraint firstItem="CF4-MF-EsH" firstAttribute="top" secondItem="eC1-R8-E2T" secondAttribute="bottom" constant="20" id="jYb-As-QcB"/>
-                                    <constraint firstItem="CF4-MF-EsH" firstAttribute="top" secondItem="eC1-R8-E2T" secondAttribute="bottom" constant="20" id="jtJ-RI-Pcb"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="centerX" secondItem="boy-o2-uWY" secondAttribute="centerX" id="l5C-nv-aeb"/>
-                                    <constraint firstItem="eC1-R8-E2T" firstAttribute="centerX" secondItem="CF4-MF-EsH" secondAttribute="centerX" id="qjT-et-sEp"/>
                                     <constraint firstItem="eC1-R8-E2T" firstAttribute="top" secondItem="boy-o2-uWY" secondAttribute="top" id="uSv-kV-BBG"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CnH-Yu-8Wt"/>
-                                        <exclude reference="I4s-mn-TnI"/>
-                                        <exclude reference="qjT-et-sEp"/>
-                                        <exclude reference="LGF-wg-0WB"/>
-                                        <exclude reference="jtJ-RI-Pcb"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="boy-o2-uWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8BO-pb-Rgf"/>
-                            <constraint firstItem="boy-o2-uWY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u3T-2V-wZM"/>
+                            <constraint firstItem="boy-o2-uWY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.556075" id="QnP-8a-VOK"/>
+                            <constraint firstItem="boy-o2-uWY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qum-tZ-RVE"/>
+                            <constraint firstItem="boy-o2-uWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbF-ej-Mlv"/>
                         </constraints>
                     </view>
                 </viewController>

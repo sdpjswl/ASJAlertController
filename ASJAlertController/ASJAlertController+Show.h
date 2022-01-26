@@ -32,14 +32,14 @@ typedef void(^TapHandler)(ASJAlertAction * _Nullable action, NSString * _Nullabl
 
 typedef NS_ENUM(NSInteger, ASJAlertControllerStyle)
 {
-  ASJAlertControllerStyleActionSheet,
-  ASJAlertControllerStyleAlert
+    ASJAlertControllerStyleActionSheet,
+    ASJAlertControllerStyleAlert
 };
 
 typedef NS_ENUM(NSInteger, ASJAlertActionStyle)
 {
-  ASJAlertActionStyleDefault = 0,
-  ASJAlertActionStyleDestructive = 2
+    ASJAlertActionStyleDefault = 0,
+    ASJAlertActionStyleDestructive = 2
 };
 
 @class ASJAlertButton;

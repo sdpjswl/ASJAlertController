@@ -36,12 +36,12 @@
 
 - (void)setAlertWindow:(UIWindow *)alertWindow
 {
-  objc_setAssociatedObject(self, @selector(alertWindow), alertWindow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(alertWindow), alertWindow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIWindow *)alertWindow
 {
-  return objc_getAssociatedObject(self, @selector(alertWindow));
+    return objc_getAssociatedObject(self, @selector(alertWindow));
 }
 
 @end
@@ -50,9 +50,9 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-  [super viewDidDisappear:animated];
-  self.alertWindow.hidden = YES;
-  self.alertWindow = nil;
+    [super viewDidDisappear:animated];
+    self.alertWindow.hidden = YES;
+    self.alertWindow = nil;
 }
 
 #pragma mark - Convenience w/o destroy
@@ -62,7 +62,7 @@
                  cancelButtonTitle:(nullable NSString *)cancelTitle
                         tapHandler:(nullable TapHandler)tapHandler
 {
-  return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleAlert tapHandler:tapHandler];
+    return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherTitles:nil preferredStyle:ASJAlertControllerStyleAlert tapHandler:tapHandler];
 }
 
 + (instancetype)showActionSheetWithTitle:(NSString *)title
@@ -72,7 +72,7 @@
                              otherTitles:(nullable NSArray <NSString *>*)otherTitles
                               tapHandler:(TapHandler)tapHandler
 {
-  return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:destructiveTitle otherTitles:otherTitles preferredStyle:ASJAlertControllerStyleActionSheet tapHandler:tapHandler];
+    return [UIAlertController showAlertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:destructiveTitle otherTitles:otherTitles preferredStyle:ASJAlertControllerStyleActionSheet tapHandler:tapHandler];
 }
 
 + (instancetype)showAlertWithTitle:(NSString *)title
@@ -82,9 +82,9 @@
                     preferredStyle:(ASJAlertControllerStyle)style
                         tapHandler:(nullable TapHandler)tapHandler
 {
-  UIAlertController *alert = [UIAlertController alertWithTitle:title message:message cancelButtonTitle:cancelTitle otherButtons:otherButtons preferredStyle:style tapHandler:tapHandler];
-  [alert show];
-  return alert;
+    UIAlertController *alert = [UIAlertController alertWithTitle:title message:message cancelButtonTitle:cancelTitle otherButtons:otherButtons preferredStyle:style tapHandler:tapHandler];
+    [alert show];
+    return alert;
 }
 
 + (instancetype)alertWithTitle:(NSString *)title
@@ -94,26 +94,26 @@
                 preferredStyle:(ASJAlertControllerStyle)style
                     tapHandler:(TapHandler)tapHandler
 {
-  for (id __attribute__((unused)) object in otherButtons)
-  {
-    NSAssert([object isKindOfClass:[ASJAlertButton class]], @"Other buttons must be of type ASJAlertButton");
-  }
-  
-  UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyle)style];
-  
-  if (cancelTitle)
-  {
-    UIAlertAction *cancel = [UIAlertController cancelActionWithTitle:cancelTitle handler:tapHandler];
-    [alert addAction:cancel];
-  }
-  
-  for (ASJAlertButton *otherButton in otherButtons)
-  {
-    UIAlertAction *other = [UIAlertController otherActionWithAlertButton:otherButton handler:tapHandler];
-    [alert addAction:other];
-  }
-  
-  return alert;
+    for (id __attribute__((unused)) object in otherButtons)
+    {
+        NSAssert([object isKindOfClass:[ASJAlertButton class]], @"Other buttons must be of type ASJAlertButton");
+    }
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyle)style];
+    
+    if (cancelTitle)
+    {
+        UIAlertAction *cancel = [UIAlertController cancelActionWithTitle:cancelTitle handler:tapHandler];
+        [alert addAction:cancel];
+    }
+    
+    for (ASJAlertButton *otherButton in otherButtons)
+    {
+        UIAlertAction *other = [UIAlertController otherActionWithAlertButton:otherButton handler:tapHandler];
+        [alert addAction:other];
+    }
+    
+    return alert;
 }
 
 #pragma mark - Convenience w/ destroy
@@ -126,9 +126,9 @@
                     preferredStyle:(ASJAlertControllerStyle)style
                         tapHandler:(TapHandler)tapHandler
 {
-  UIAlertController *alert = [UIAlertController alertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:destructiveTitle otherTitles:otherTitles preferredStyle:style tapHandler:tapHandler];
-  [alert show];
-  return alert;
+    UIAlertController *alert = [UIAlertController alertWithTitle:title message:message cancelButtonTitle:cancelTitle destructiveButtonTitle:destructiveTitle otherTitles:otherTitles preferredStyle:style tapHandler:tapHandler];
+    [alert show];
+    return alert;
 }
 
 + (instancetype)alertWithTitle:(NSString *)title
@@ -139,94 +139,94 @@
                 preferredStyle:(ASJAlertControllerStyle)style
                     tapHandler:(TapHandler)tapHandler
 {
-  for (id __attribute__((unused)) object in otherTitles)
-  {
-    NSAssert([object isKindOfClass:[NSString class]], @"Other buttons must be of type NSString");
-  }
-  
-  UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyle)style];
-  
-  if (cancelTitle)
-  {
-    UIAlertAction *cancel = [UIAlertController cancelActionWithTitle:cancelTitle handler:tapHandler];
-    [alert addAction:cancel];
-  }
-  
-  if (destructiveTitle)
-  {
-    UIAlertAction *destroy = [UIAlertController destructiveActionWithTitle:destructiveTitle handler:tapHandler];
-    [alert addAction:destroy];
-  }
-  
-  for (NSString *otherTitle in otherTitles)
-  {
-    UIAlertAction *other = [UIAlertController otherActionWithTitle:otherTitle handler:tapHandler];
-    [alert addAction:other];
-  }
-  
-  return alert;
+    for (id __attribute__((unused)) object in otherTitles)
+    {
+        NSAssert([object isKindOfClass:[NSString class]], @"Other buttons must be of type NSString");
+    }
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyle)style];
+    
+    if (cancelTitle)
+    {
+        UIAlertAction *cancel = [UIAlertController cancelActionWithTitle:cancelTitle handler:tapHandler];
+        [alert addAction:cancel];
+    }
+    
+    if (destructiveTitle)
+    {
+        UIAlertAction *destroy = [UIAlertController destructiveActionWithTitle:destructiveTitle handler:tapHandler];
+        [alert addAction:destroy];
+    }
+    
+    for (NSString *otherTitle in otherTitles)
+    {
+        UIAlertAction *other = [UIAlertController otherActionWithTitle:otherTitle handler:tapHandler];
+        [alert addAction:other];
+    }
+    
+    return alert;
 }
 
 #pragma mark - Show
 
 - (void)show
 {
-  [self show:YES];
+    [self show:YES];
 }
 
 - (void)show:(BOOL)animated
 {
-  self.alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  self.alertWindow.rootViewController = [[UIViewController alloc] init];
-  self.alertWindow.tintColor = [UIApplication sharedApplication].delegate.window.tintColor;
-  
-  UIWindow *topWindow = [UIApplication sharedApplication].windows.lastObject;
-  self.alertWindow.windowLevel = topWindow.windowLevel + 1;
-  
-  [self.alertWindow makeKeyAndVisible];
-  [self.alertWindow.rootViewController presentViewController:self animated:animated completion:nil];
+    self.alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.alertWindow.rootViewController = [[UIViewController alloc] init];
+    self.alertWindow.tintColor = [UIApplication sharedApplication].delegate.window.tintColor;
+    
+    UIWindow *topWindow = [UIApplication sharedApplication].windows.lastObject;
+    self.alertWindow.windowLevel = topWindow.windowLevel + 1;
+    
+    [self.alertWindow makeKeyAndVisible];
+    [self.alertWindow.rootViewController presentViewController:self animated:animated completion:nil];
 }
 
 #pragma mark - Action constructors
 
 + (UIAlertAction *)cancelActionWithTitle:(NSString *)title handler:(TapHandler)handler
 {
-  return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
-          {
-            if (handler) {
-              handler(action, title);
-            }
-          }];
+    return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
+            {
+        if (handler) {
+            handler(action, title);
+        }
+    }];
 }
 
 + (UIAlertAction *)destructiveActionWithTitle:(NSString *)title handler:(TapHandler)handler
 {
-  return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
-          {
-            if (handler) {
-              handler(action, title);
-            }
-          }];
+    return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+            {
+        if (handler) {
+            handler(action, title);
+        }
+    }];
 }
 
 + (UIAlertAction *)otherActionWithAlertButton:(ASJAlertButton *)alertButton handler:(TapHandler)handler
 {
-  return [UIAlertAction actionWithTitle:alertButton.title style:(UIAlertActionStyle)alertButton.style handler:^(UIAlertAction * _Nonnull action)
-          {
-            if (handler) {
-              handler(action, alertButton.title);
-            }
-          }];
+    return [UIAlertAction actionWithTitle:alertButton.title style:(UIAlertActionStyle)alertButton.style handler:^(UIAlertAction * _Nonnull action)
+            {
+        if (handler) {
+            handler(action, alertButton.title);
+        }
+    }];
 }
 
 + (UIAlertAction *)otherActionWithTitle:(NSString *)title handler:(TapHandler)handler
 {
-  return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
-          {
-            if (handler) {
-              handler(action, title);
-            }
-          }];
+    return [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+            {
+        if (handler) {
+            handler(action, title);
+        }
+    }];
 }
 
 @end
@@ -237,10 +237,10 @@
 
 + (ASJAlertButton *)buttonWithTitle:(NSString *)title style:(ASJAlertActionStyle)style
 {
-  ASJAlertButton *button = [[ASJAlertButton alloc] init];
-  button.title = title;
-  button.style = style;
-  return button;
+    ASJAlertButton *button = [[ASJAlertButton alloc] init];
+    button.title = title;
+    button.style = style;
+    return button;
 }
 
 @end
